@@ -96,6 +96,28 @@ cd ai-history-tools
 > 令牌可在 <https://dash.cloudflare.com/profile/api-tokens> 随时删除，删除后立即失效。
 > 若不想保留自动部署能力，也可以在控制台手动上传 `AI历史网站-上传用.zip`。
 
+### 源码云端备份（GitHub）
+
+| 项目 | 值 |
+| --- | --- |
+| 仓库 | <https://github.com/DDXR365/ai>（公开） |
+| 分支 | `main`，1 条干净的初始提交（作者 `DDXR365`，noreply 邮箱） |
+| 认证 | Fine-grained PAT，需要 `Contents: Read and write` 权限 |
+
+**为什么不用 `git push`**：`github.com` 的网页与 HTTPS 推送通道在国内**时通时断**
+（实测同一分钟内既有 15 秒超时，也有 300ms 正常），而 `api.github.com` 一直稳定在 250–350ms。
+因此推送改为走 **Git Data API**，工具是 `ai-history-tools/gh-sync.js`：
+
+```powershell
+$env:GH_TOKEN = "<你的 GitHub 令牌>"
+node ai-history-tools\gh-sync.js DDXR365 ai ai-history "本次更新的说明"
+```
+
+该脚本以远端 `main` 为父提交做**增量**提交，内容无变化时自动跳过，并能识别本地已删除的文件。
+
+> 本地 git 仓库的 `origin` 已指向同一地址，两边内容一致。若日后 GitHub 通道恢复稳定，
+> 直接 `git push` 也可以。
+
 ### 重要：`workers.dev` 在国内被封，必须用 `pages.dev`
 
 上线过程中实测确认（这决定了几次返工）：
