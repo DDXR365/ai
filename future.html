@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>当下与未来 · 人工智能发展史</title>
+<meta name="description" content="大模型时代的能力边界、六个真实挑战、五条可能的技术走向、关于通用人工智能的三派争论，以及一份延伸阅读清单。">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2335e0ff'/><text x='16' y='23' font-size='18' font-family='monospace' font-weight='bold' text-anchor='middle' fill='%2306101f'>AI</text></svg>">
+<meta name="theme-color" content="#070a12">
+<link rel="canonical" href="https://ai-history-guide.pages.dev/future.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="人工智能发展史">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="当下与未来 · 人工智能发展史">
+<meta property="og:description" content="大模型的能力边界与不可靠场景、六个真实挑战、五条技术走向，以及关于通用人工智能的三派争论。">
+<meta property="og:url" content="https://ai-history-guide.pages.dev/future.html">
+<meta property="og:image" content="https://ai-history-guide.pages.dev/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="人工智能的当下与未来">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="当下与未来 · 人工智能发展史">
+<meta name="twitter:description" content="能力边界、六个挑战、五条走向与三派争论。">
+<meta name="twitter:image" content="https://ai-history-guide.pages.dev/assets/og-cover.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "人工智能的当下与未来",
+  "url": "https://ai-history-guide.pages.dev/future.html",
+  "inLanguage": "zh-CN",
+  "description": "大模型时代的能力边界、六个真实挑战、五条技术走向、关于通用人工智能的三种立场与延伸阅读清单。",
+  "isPartOf": { "@type": "WebSite", "name": "人工智能发展史", "url": "https://ai-history-guide.pages.dev/" }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+<div class="progress"></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">AI</span>
+      <span>人工智能发展史<small>1943 — NOW</small></span>
+    </a>
+    <button class="burger" aria-label="展开导航菜单" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="site-nav" aria-label="主导航">
+      <a href="index.html">首页</a>
+      <a href="timeline.html">发展时间轴</a>
+      <a href="pioneers.html">关键人物</a>
+      <a href="future.html">当下与未来</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===== 现状 ===== -->
+<section class="section" style="padding-top:132px" id="capability">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Now · 能力边界</span>
+      <h1 style="font-size:clamp(1.8rem,4.4vw,2.7rem);margin-bottom:.6rem">当下与未来</h1>
+      <p class="lead" style="margin-bottom:0">
+        历史之所以有用，是因为它能防止两种极端：把当前技术当成万能，或当成骗局。
+        这一页尽量冷静地列出：今天的大模型能做到什么、在哪些地方会稳定失败、以及接下来最可能往哪走。
+      </p>
+    </div>
+
+    <div class="grid g2">
+      <article class="card card-accent reveal">
+        <span class="idx">WORKS · 相对可靠的场景</span>
+        <h3>已经具备生产价值的能力</h3>
+        <ul>
+          <li><b>语言转换类：</b>翻译、改写、摘要、格式转换、代码注释——有明确输入输出且可人工复核。</li>
+          <li><b>代码生成与调试：</b>写样板代码、解释报错、重构，配合测试即可验证，是目前收益最明确的场景之一。</li>
+          <li><b>信息整合：</b>在给定材料范围内做归纳与比较（前提是材料由你提供，而不是让它「回忆」）。</li>
+          <li><b>创意发散：</b>生成候选方案、命名、大纲，作为人类决策的起点而非终点。</li>
+          <li><b>结构化抽取：</b>把非结构化文本转成字段、表格与标签。</li>
+        </ul>
+        <p class="small muted" style="margin-top:.8rem">共同特征：结果可验证，或错误代价可承受。</p>
+      </article>
+
+      <article class="card reveal" style="border-color:rgba(255,107,139,.28)">
+        <span class="idx" style="color:var(--rose)">FAILS · 需要外部验证</span>
+        <h3>结构性不可靠的地方</h3>
+        <ul>
+          <li><b>事实性陈述：</b>会流畅地编造不存在的引用、法条、API 与数字——「幻觉」的根源是模型在预测下一个词，而不是在查询数据库。</li>
+          <li><b>精确计算与长链条推理：</b>没有工具辅助时，多步算术与逻辑链越长越容易崩。</li>
+          <li><b>自身能力边界：</b>模型通常不知道自己不知道什么，很少主动说「这超出我的能力」。</li>
+          <li><b>时间与状态：</b>训练数据有时间截止，若没有检索工具，对最新事件会答错或过时。</li>
+          <li><b>高风险决策：</b>医疗、法律、信贷等场景中，责任无法由模型承担。</li>
+        </ul>
+        <p class="small muted" style="margin-top:.8rem">共同特征：错误看起来同样自信，人类难以察觉。</p>
+      </article>
+    </div>
+
+    <div class="note warn reveal">
+      <b>一条实用判断法则：</b>如果任务的结果你能在几秒到几分钟内验证对错，AI 会显著提升效率；
+      如果验证成本高于自己做一遍，那么当前技术对你几乎没有净收益。这条法则比任何「AI 会不会取代我」的讨论都更可操作。
+    </div>
+  </div>
+</section>
+
+<!-- ===== 挑战 ===== -->
+<section class="section" id="challenges">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Challenges</span>
+      <h2 class="h-sec">六个真实存在的挑战</h2>
+      <p class="lead">它们不是修辞，而是有具体技术表现、有可测量指标、也有明确研究方向的工程难题。</p>
+    </div>
+
+    <div class="grid g3">
+      <article class="card reveal">
+        <span class="idx">01</span>
+        <h3>可靠性与幻觉</h3>
+        <p>模型优化目标是「生成看起来合理的文本」，这与「说出真相」并不等价。检索增强、工具调用与可验证推理是当前三条主要缓解路径，但没有一条能彻底解决。</p>
+        <p class="small muted">衡量方式：事实准确率、引用可追溯率、幻觉率</p>
+      </article>
+      <article class="card reveal">
+        <span class="idx">02</span>
+        <h3>可解释性</h3>
+        <p>我们能测出模型的行为，却很难解释它为什么这样决策。对高风险领域而言，这既是监管障碍，也是改进模型的障碍——不知道原因就无法可靠地修复。</p>
+        <p class="small muted">研究方向：机制可解释性、特征可视化、探针分析</p>
+      </article>
+      <article class="card reveal">
+        <span class="idx">03</span>
+        <h3>数据与算力瓶颈</h3>
+        <p>高质量人类文本正在接近枯竭，而算力与电力的扩张受物理条件约束。合成数据、数据筛选与更高效的架构成为必需，而不是可选项。</p>
+        <p class="small muted">相关讨论：规模定律是否仍将延续、算力集中度</p>
+      </article>
+      <article class="card reveal">
+        <span class="idx">04</span>
+        <h3>能耗与成本</h3>
+        <p>训练与推理的电力消耗已进入数据中心规划的约束条件。推理需求随用户量线性增长，使「单位 token 成本」成为比模型参数更关键的商业指标。</p>
+        <p class="small muted">研究方向：量化、蒸馏、稀疏化、专用推理芯片</p>
+      </article>
+      <article class="card reveal">
+        <span class="idx">05</span>
+        <h3>版权与创作生态</h3>
+        <p>训练数据中大量受版权保护的作品如何使用、生成内容是否享有著作权、创作者如何被补偿——这些问题在不同法域有截然不同的答案，且仍在诉讼与立法之中。</p>
+        <p class="small muted">相关议题：数据授权、生成内容标识、收益分配</p>
+      </article>
+      <article class="card reveal">
+        <span class="idx">06</span>
+        <h3>对齐与治理</h3>
+        <p>「让系统做我们真正想要的」在技术上远比「让系统听话」困难。评测标准、红队测试、部署前审查、国际协调机制都处于快速搭建阶段，各国路径差异明显。</p>
+        <p class="small muted">相关框架：风险分级、透明度义务、模型评测</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 走向 ===== -->
+<section class="section" id="trends">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Directions</span>
+      <h2 class="h-sec">五条可能的技术走向</h2>
+      <p class="lead">
+        以下不是预测，而是当前投入最集中、路线分歧也最明显的五个方向。每一条都可能在数年内被证伪——
+        这正是这门学科过去八十年的常态。
+      </p>
+    </div>
+
+    <div class="grid" style="gap:.85rem">
+      <div class="era reveal">
+        <div class="span">01</div>
+        <div><h3>更长的思考：测试时计算</h3><p>把算力从训练阶段部分转移到推理阶段，让模型在回答前进行更长的推理链，并用可验证的奖励（数学答案、代码测试）来强化这个过程。核心张力是<b>成本与延迟</b>能否被接受。</p><div class="tagline"># 推理 · 强化学习</div></div>
+      </div>
+      <div class="era reveal">
+        <div class="span">02</div>
+        <div><h3>世界模型与多模态统一</h3><p>从「预测下一个词」走向「预测世界的下一个状态」，把视频、动作与物理规律纳入统一表征。支持者认为这是通向常识与规划的必经之路，怀疑者认为代价过高、收益不确定。</p><div class="tagline"># 世界模型 · 视频生成</div></div>
+      </div>
+      <div class="era reveal">
+        <div class="span">03</div>
+        <div><h3>具身智能与机器人</h3><p>把大模型的语义理解接到真实身体上。难点不在「会说」，而在数据稀缺、安全约束与硬件成本——真实世界的试错远比模拟昂贵，这条路的进展会明显慢于纯软件。</p><div class="tagline"># 机器人 · 仿真到现实</div></div>
+      </div>
+      <div class="era reveal">
+        <div class="span">04</div>
+        <div><h3>小型高效与端侧部署</h3><p>把可用能力压缩到手机、笔记本与嵌入式设备上。蒸馏、量化与混合专家架构让「小模型 + 专用数据」在大量具体任务上逼近通用大模型，同时解决隐私、成本与延迟问题。</p><div class="tagline"># 效率 · 端侧</div></div>
+      </div>
+      <div class="era reveal">
+        <div class="span">05</div>
+        <div><h3>智能体与 AI for Science</h3><p>一端是能自主拆解任务、调用工具、多轮自我纠错的智能体；另一端是把模型直接用作科研工具——蛋白质设计、材料筛选、数学猜想验证。两者共同点是把 AI 从「回答者」变成「执行者」。</p><div class="tagline"># 智能体 · 科学发现</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 争论 ===== -->
+<section class="section" id="debate">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Debate</span>
+      <h2 class="h-sec">关于「通用人工智能」的三种立场</h2>
+      <p class="lead">
+        这是一个短期内无法用证据裁决的问题，但了解三方的理由，比记住任何时间表预测都更有价值。
+      </p>
+    </div>
+
+    <div class="grid g3">
+      <article class="card reveal">
+        <span class="idx">立场 A</span>
+        <h3>加速派</h3>
+        <p><b>主张：</b>现有范式足以通向通用智能，关键在规模、算力与工程投入；能力会持续涌现，抵制的代价是错失一个时代的增长。</p>
+        <p><b>主要依据：</b>过去十年能力随规模稳定提升，且多次打破「这不可能」的预测。</p>
+        <p class="small muted">弱点：难以解释为什么纯预测式训练会带来因果理解与真正的规划能力。</p>
+      </article>
+      <article class="card reveal">
+        <span class="idx">立场 B</span>
+        <h3>谨慎派</h3>
+        <p><b>主张：</b>能力进步不可否认，但安全研究、评测机制与治理框架必须同步甚至先行；在无法验证系统行为之前，不应把关键决策交给它。</p>
+        <p><b>主要依据：</b>模型行为难以完全预测，且能力越强，错误的后果越不可逆。</p>
+        <p class="small muted">弱点：安全投入难以量化收益，容易被竞争者视为拖慢节奏。</p>
+      </article>
+      <article class="card reveal">
+        <span class="idx">立场 C</span>
+        <h3>怀疑派</h3>
+        <p><b>主张：</b>当前模型是强大的统计拟合器，缺少真正的世界模型与因果推理，「通用智能」被过度营销，短期会有大量承诺落空。</p>
+        <p><b>主要依据：</b>模型在简单变换下的脆弱性、训练数据依赖与缺乏持续学习能力。</p>
+        <p class="small muted">弱点：低估了工程规模化与「足够好」的实用性所带来的真实影响。</p>
+      </article>
+    </div>
+
+    <div class="quote reveal">
+      我们倾向于高估一项技术在两年内的变化，而低估它在十年内的变化。
+      <cite>—— 这句话被反复归因于不同的人，但它准确描述了 AI 从 2012 到 2025 年的实际节奏：短期被高估，长期被低估</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 延伸阅读 ===== -->
+<section class="section" id="reading">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Reading List</span>
+      <h2 class="h-sec">延伸阅读</h2>
+      <p class="lead">从入门到深入，按阅读顺序排列。前四项适合任何背景的读者，后三项需要一定技术基础。</p>
+    </div>
+
+    <div class="table-scroll reveal">
+      <table>
+        <thead>
+          <tr><th style="width:30%">书目</th><th style="width:20%">作者</th><th>推荐理由</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>《人工智能：一种现代的方法》</b></td><td>罗素、诺维格</td><td>该领域最权威的教科书，覆盖搜索、逻辑、概率、学习与感知。即使只读第一部分的历史概述，也能建立完整框架。</td></tr>
+          <tr><td><b>《人工智能的探索》</b>（The Quest for Artificial Intelligence）</td><td>尼尔森</td><td>由亲历者撰写的通史，对 1950–2000 年代的人物、项目与经费起伏记录尤为详实。</td></tr>
+          <tr><td><b>《AI 3.0》</b></td><td>梅拉妮·米歇尔</td><td>冷静地拆解「AI 已经理解世界」这一印象，用大量具体案例说明当前系统的能力边界，适合用来校正预期。</td></tr>
+          <tr><td><b>《人机对齐》</b>（The Alignment Problem）</td><td>布莱恩·克里斯汀</td><td>把对齐问题的历史与技术脉络讲成一部叙事，是理解「为什么让 AI 听话很难」的最佳入门。</td></tr>
+          <tr><td><b>《强化学习导论》</b></td><td>萨顿、巴托</td><td>行为主义路线的标准教材。想理解 AlphaGo 与 RLHF 的数学基础，从这里开始。</td></tr>
+          <tr><td><b>《深度学习》</b></td><td>古德费洛、本吉奥、库维尔</td><td>深度学习的系统性教材，覆盖反向传播、正则化、卷积与循环网络的核心推导。</td></tr>
+          <tr><td><b>《超级智能》</b></td><td>尼克·博斯特罗姆</td><td>关于长期风险最常被引用的论证。无论是否同意，它定义了此后二十年这场辩论的概念框架。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid g3 reveal" style="margin-top:1.2rem">
+      <article class="card">
+        <span class="idx">持续跟踪</span>
+        <h3>斯坦福 AI Index</h3>
+        <p>每年发布一次的 AI 产业与学术年度报告，用数据覆盖论文、专利、投资、算力与政策，是引用率最高的年度资料。</p>
+        <p class="small"><a href="https://hai.stanford.edu/ai-index">hai.stanford.edu/ai-index</a></p>
+      </article>
+      <article class="card">
+        <span class="idx">数据与算力</span>
+        <h3>Epoch AI</h3>
+        <p>专门追踪模型规模、训练算力与数据趋势的研究机构，本页关于算力量级的估算口径多来自此类公开分析。</p>
+        <p class="small"><a href="https://epoch.ai">epoch.ai</a></p>
+      </article>
+      <article class="card">
+        <span class="idx">原始论文</span>
+        <h3>arXiv cs.AI / cs.CL / cs.LG</h3>
+        <p>几乎所有重要成果都会先以预印本形式出现在这里。前文表格中列出的十篇文献都可以免费找到原文。</p>
+        <p class="small"><a href="https://arxiv.org/list/cs.AI/recent">arxiv.org/list/cs.AI</a></p>
+      </article>
+    </div>
+
+    <div class="note reveal" style="margin-top:2rem">
+      <b>最后一句：</b>回看这八十多年，AI 的每一次跃迁都不是因为某个天才的灵光一现，而是「一个卡了很久的问题」+
+      「一项来自别处的技术」+「足够多的资源」三者恰好凑齐。达特茅斯会议等来了逻辑与计算机，深度学习等来了 GPU 与互联网文本。
+      下一个转折点，很可能同样来自今天看起来无关的地方——这也意味着，把注意力只放在模型参数上，永远会看漏真正重要的变化。
+    </div>
+
+    <p class="center" style="margin-top:2.4rem">
+      <a class="btn" href="timeline.html">← 回到发展时间轴</a>
+      <a class="btn btn-primary" href="index.html">返回首页</a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <div>
+      <div style="color:var(--text);font-weight:700;margin-bottom:.3rem">人工智能发展史 · 导览</div>
+      <div>一个纯静态的科普站点，无外部依赖，可离线打开。</div>
+      <div class="small" style="margin-top:.5rem">© <span data-year>2026</span> 内容整理自公开学术资料与历史文献，仅供学习参考。</div>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">首页</a>
+      <a href="timeline.html">发展时间轴</a>
+      <a href="pioneers.html">关键人物</a>
+      <a href="future.html">当下与未来</a>
+    </nav>
+  </div>
+</footer>
+
+<button class="totop" aria-label="返回顶部">↑</button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

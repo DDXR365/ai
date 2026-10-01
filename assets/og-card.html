@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>OG 分享图生成页（1200×630）</title>
+<meta name="robots" content="noindex">
+<!--
+  ============================================================================
+  OG 分享图生成页 —— 这不是网站页面，是一个用于「导出图片」的工具页。
+
+  用途：社交媒体（微信 / X / LinkedIn / Facebook）在分享链接时抓取的缩略图，
+        必须是 PNG 或 JPEG，且建议正好 1200×630，本页就是按这个尺寸画的。
+
+  导出步骤：
+    1. 用 Chrome 或 Edge 打开本文件（双击即可）
+    2. 按 F12 打开开发者工具 → 按 Ctrl+Shift+P 打开命令面板
+    3. 输入并选择「Capture full size screenshot」（捕获完整尺寸屏幕截图）
+    4. 浏览器会自动下载一张 1200×630 的 PNG
+    5. 把它重命名为 og-cover.png，放进 assets/ 目录，与 index.html 同级关系如下：
+         assets/og-cover.png
+    6. 部署后，用社交平台的调试工具刷新缓存：
+         Facebook: https://developers.facebook.com/tools/debug/
+         X:        https://cards-dev.twitter.com/validator
+       否则平台可能仍显示旧的无图卡片。
+
+  注意：浏览器缩放请保持 100%，否则截图尺寸会不等于 1200×630。
+  ============================================================================
+-->
+<style>
+  html, body { margin: 0; padding: 0; width: 1200px; height: 630px; overflow: hidden; background: #070a12; }
+  .og {
+    width: 1200px; height: 630px; box-sizing: border-box;
+    position: relative; overflow: hidden;
+    background:
+      radial-gradient(760px 460px at 8% -10%, rgba(53,224,255,.20), transparent 62%),
+      radial-gradient(700px 420px at 92% 6%, rgba(139,123,255,.22), transparent 60%),
+      radial-gradient(600px 400px at 60% 118%, rgba(255,180,84,.10), transparent 65%),
+      #070a12;
+    font-family: "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+    color: #e8eefb;
+    padding: 72px 76px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .og::after {
+    content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px;
+    background: linear-gradient(100deg, #35e0ff, #8b7bff 55%, #ffb454);
+  }
+  .kicker {
+    font-family: "JetBrains Mono", Consolas, monospace; font-size: 17px; letter-spacing: 5px;
+    color: #35e0ff; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 12px;
+  }
+  .kicker::before {
+    content: ""; width: 9px; height: 9px; border-radius: 50%;
+    background: #35e0ff; box-shadow: 0 0 16px #35e0ff;
+  }
+  h1 {
+    font-size: 78px; line-height: 1.16; margin: 26px 0 0; font-weight: 800; letter-spacing: -1px;
+  }
+  h1 .grad {
+    background: linear-gradient(100deg, #35e0ff, #8b7bff 55%, #ffb454);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .sub { font-size: 25px; color: #a7b6d0; margin-top: 20px; line-height: 1.6; }
+  .years {
+    display: flex; gap: 10px; flex-wrap: wrap; margin-top: 30px;
+  }
+  .years span {
+    font-family: "JetBrains Mono", Consolas, monospace; font-size: 19px;
+    padding: 7px 15px; border-radius: 999px;
+    border: 1px solid #22304d; background: rgba(255,255,255,.04); color: #a7b6d0;
+  }
+  .years span.hot { border-color: rgba(53,224,255,.45); color: #35e0ff; background: rgba(53,224,255,.09); }
+  .foot {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    border-top: 1px solid #22304d; padding-top: 22px;
+    font-size: 20px; color: #6f7f9d;
+  }
+  .foot b { color: #e8eefb; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="og">
+  <div>
+    <div class="kicker">A Brief History of AI</div>
+    <h1>从一颗<span class="grad">人造神经元</span><br>到会推理的<span class="grad">万亿参数模型</span></h1>
+    <div class="sub">八个阶段 · 67 个关键节点 · 两次寒冬 · 三大流派</div>
+    <div class="years">
+      <span>1943</span>
+      <span>1956</span>
+      <span>1974</span>
+      <span>1987</span>
+      <span class="hot">2012</span>
+      <span class="hot">2017</span>
+      <span class="hot">2022</span>
+      <span class="hot">2025</span>
+    </div>
+  </div>
+  <div class="foot">
+    <div><b>人工智能发展史</b> · 导览</div>
+    <div>1943 — NOW</div>
+  </div>
+</div>
+</body>
+</html>

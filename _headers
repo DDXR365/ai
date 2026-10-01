@@ -1,0 +1,47 @@
+# Cloudflare Pages 自定义响应头
+# 语法：第一行是路径匹配规则，紧随其后缩进一层写 Header。
+# 本文件不会被当作静态资源对外提供。
+# 如需临时关闭全部自定义头，把本文件重命名为 _headers.off 即可。
+#
+# 注意：同一请求命中多条规则时，同名 Header 的值会被「逗号拼接」而不是覆盖。
+# 因此下面刻意让各条规则的路径互不重叠，避免出现非法的 Cache-Control 组合值。
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), browsing-topics=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'none'; frame-ancestors 'none'
+# 上面 CSP 中放行的两个 cloudflareinsights.com 域名，是给 Cloudflare Web Analytics 用的：
+# 若日后在面板中开启该统计，其脚本与数据上报默认会被 CSP 拦截（表现为「统计无数据」）。
+# 如果不打算使用该统计，可以把这两个域名删掉，让策略更严。
+
+# 阻止 Cloudflare 自动分配的预览域名被搜索引擎收录，避免与正式域名产生重复内容
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+# 生成 OG 分享图的辅助页面，不需要被收录
+/assets/og-card.html
+  X-Robots-Tag: noindex
+
+# 仓库交接文档会随站点一起部署，但不属于站点内容，不应被索引
+/README.md
+  X-Robots-Tag: noindex
+
+# 样式与脚本：内容变化即需改文件名，因此可长期强缓存
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 图片：一周缓存（OG 分享图可能被平台侧缓存，更新后需用调试工具刷新）
+/assets/*.png
+  Cache-Control: public, max-age=604800
+
+# HTML 不缓存，保证推送后立即生效
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

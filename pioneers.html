@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>关键人物与技术谱系 · 人工智能发展史</title>
+<meta name="description" content="人工智能发展史上的关键人物：从图灵、麦卡洛克、香农、麦卡锡、明斯基，到辛顿、杨立昆、本吉奥、李飞飞、哈萨比斯，以及把感知机一路演化成 Transformer 的技术家谱。">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2335e0ff'/><text x='16' y='23' font-size='18' font-family='monospace' font-weight='bold' text-anchor='middle' fill='%2306101f'>AI</text></svg>">
+<meta name="theme-color" content="#070a12">
+<link rel="canonical" href="https://ai-history-guide.pages.dev/pioneers.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="人工智能发展史">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="关键人物与技术谱系 · 人工智能发展史">
+<meta property="og:description" content="从图灵、麦卡洛克、香农、麦卡锡、明斯基，到辛顿、杨立昆、本吉奥、李飞飞、哈萨比斯；以及从感知机到 Transformer 的八代技术谱系。">
+<meta property="og:url" content="https://ai-history-guide.pages.dev/pioneers.html">
+<meta property="og:image" content="https://ai-history-guide.pages.dev/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="人工智能关键人物与技术谱系">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="关键人物与技术谱系 · 人工智能发展史">
+<meta name="twitter:description" content="21 位研究者与从感知机到 Transformer 的八代技术谱系。">
+<meta name="twitter:image" content="https://ai-history-guide.pages.dev/assets/og-cover.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "人工智能关键人物与技术谱系",
+  "url": "https://ai-history-guide.pages.dev/pioneers.html",
+  "inLanguage": "zh-CN",
+  "description": "21 位关键研究者，以及从 M-P 神经元、感知机、反向传播、CNN/LSTM 到 Transformer 的八代技术谱系。",
+  "isPartOf": { "@type": "WebSite", "name": "人工智能发展史", "url": "https://ai-history-guide.pages.dev/" }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+<div class="progress"></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">AI</span>
+      <span>人工智能发展史<small>1943 — NOW</small></span>
+    </a>
+    <button class="burger" aria-label="展开导航菜单" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="site-nav" aria-label="主导航">
+      <a href="index.html">首页</a>
+      <a href="timeline.html">发展时间轴</a>
+      <a href="pioneers.html">关键人物</a>
+      <a href="future.html">当下与未来</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="section" style="padding-top:132px" id="people">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">People &amp; Lineage</span>
+      <h1 style="font-size:clamp(1.8rem,4.4vw,2.7rem);margin-bottom:.6rem">关键人物与技术谱系</h1>
+      <p class="lead" style="margin-bottom:0">
+        一项学科的历史，最终是人的历史。下面这些名字大致按「奠基者 → 复兴者 → 当代推动者」排列，
+        不是一份排名，而是一条思想传承的线索：从「神经元能否计算」，到「网络能否学习」，再到「规模能否带来智能」。
+      </p>
+    </div>
+
+    <!-- ===== 奠基者 ===== -->
+    <h2 class="h-sec reveal" style="margin:2.6rem 0 .4rem">一、奠基者：把问题提对的人</h2>
+    <p class="lead reveal" style="margin-bottom:1.4rem">1943–1969。他们大多在有「AI」这个词之前就已经开始工作，贡献是定义了整个领域的问题框架。</p>
+
+    <div class="grid g3">
+      <article class="card person reveal">
+        <div class="top"><div class="avatar">阿</div><div><h3>艾伦·图灵</h3><div class="who">1912–1954 · 英国</div></div></div>
+        <p>计算机科学与 AI 的共同起点。1950 年用「模仿游戏」把哲学问题转化为可执行的测试，并预判了此后所有主要反对意见。</p>
+        <div class="keys"><b>关键词：</b>图灵机 · 图灵测试 · 可计算性</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar v3">麦</div><div><h3>沃伦·麦卡洛克 &amp; 沃尔特·皮茨</h3><div class="who">神经生理学 × 逻辑学</div></div></div>
+        <p>1943 年提出 M-P 神经元模型，第一次证明简单阈值单元组成的网络可以表达任意逻辑命题，连接主义路线由此发端。</p>
+        <div class="keys"><b>关键词：</b>人工神经元 · 阈值逻辑</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar v2">香</div><div><h3>克劳德·香农</h3><div class="who">1916–2001 · 美国</div></div></div>
+        <p>信息论创始人，也是 1956 年达特茅斯会议的发起人之一。他让「信息」成为可度量的量，为机器学习提供了损失函数与熵的语言。</p>
+        <div class="keys"><b>关键词：</b>信息论 · 熵 · 达特茅斯会议</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar v3">赫</div><div><h3>唐纳德·赫布</h3><div class="who">1904–1985 · 加拿大</div></div></div>
+        <p>1949 年提出赫布学习律：同时激活的神经元连接会被强化。这是反向传播、自组织映射乃至一切「从数据中调整权重」方法的思想原型。</p>
+        <div class="keys"><b>关键词：</b>赫布学习律 · 突触可塑性</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar">约</div><div><h3>约翰·麦卡锡</h3><div class="who">1927–2011 · 美国</div></div></div>
+        <p>「人工智能」一词的提出者，达特茅斯会议的组织者，LISP 语言的发明者。他坚持用数学逻辑刻画智能，奠定了符号主义四十年的统治地位。</p>
+        <div class="keys"><b>关键词：</b>AI 命名 · LISP · 逻辑主义</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar">马</div><div><h3>马文·明斯基</h3><div class="who">1927–2016 · 美国</div></div></div>
+        <p>MIT AI 实验室联合创始人，最早实现神经网络硬件的人之一，也是 1969 年《感知机》的作者。他既是连接主义的先驱，也是它第一次寒冬的推手。</p>
+        <div class="keys"><b>关键词：</b>SNARC · 《感知机》· 框架理论</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar v2">弗</div><div><h3>弗兰克·罗森布拉特</h3><div class="who">1928–1971 · 美国</div></div></div>
+        <p>1958 年提出感知机与可收敛的学习算法，是「让机器自己调整参数」的第一人。他在 1971 年意外去世，神经网络研究也随之进入长期低谷。</p>
+        <div class="keys"><b>关键词：</b>感知机 · 学习算法</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar v3">纽</div><div><h3>纽厄尔 &amp; 西蒙</h3><div class="who">1927–1992 / 1916–2001 · 美国</div></div></div>
+        <p>逻辑理论家、通用问题求解器的作者，把「搜索 + 启发式」确立为解决问题的通用方法。西蒙也是唯一同时获得图灵奖与诺贝尔经济学奖的人。</p>
+        <div class="keys"><b>关键词：</b>启发式搜索 · 物理符号系统假设</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar v2">阿</div><div><h3>阿瑟·萨缪尔</h3><div class="who">1901–1990 · 美国</div></div></div>
+        <p>跳棋程序的作者，1959 年提出「机器学习」这一术语。他的程序能通过自我对弈提升棋力，是「机器无需显式编程即可改进」的最早示范。</p>
+        <div class="keys"><b>关键词：</b>机器学习命名 · 自我对弈</div>
+      </article>
+    </div>
+
+    <!-- ===== 复兴者 ===== -->
+    <h2 class="h-sec reveal" style="margin:3.4rem 0 .4rem">二、复兴者：让网络真正能学的人</h2>
+    <p class="lead reveal" style="margin-bottom:1.4rem">1980 年代至今。他们解决了「深层网络怎么训练」这个卡了十七年的问题，并把这条路推到工业规模。</p>
+
+    <div class="grid g3">
+      <article class="card person reveal">
+        <div class="top"><div class="avatar">杰</div><div><h3>杰弗里·辛顿</h3><div class="who">1947– · 英国 / 加拿大</div></div></div>
+        <p>反向传播的推广者、深度信念网络的提出者、AlexNet 的导师。四十余年坚持连接主义，在两次寒冬中未曾转向。2023 年离开谷歌以便自由讨论 AI 风险，2024 年获诺贝尔物理学奖。</p>
+        <div class="keys"><b>关键词：</b>反向传播 · 深度学习 · 玻尔兹曼机 · AI 风险</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar v3">杨</div><div><h3>杨立昆（Yann LeCun）</h3><div class="who">1960– · 法国 / 美国</div></div></div>
+        <p>卷积网络的奠基者，1989 年用手写数字识别证明卷积结构有效。他长期主张「世界模型」路线，认为当前自回归语言模型不足以通向真正的智能。</p>
+        <div class="keys"><b>关键词：</b>CNN · LeNet · 自监督学习 · 世界模型</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar v2">约</div><div><h3>约书亚·本吉奥</h3><div class="who">1964– · 加拿大</div></div></div>
+        <p>注意力机制与表征学习的早期推动者之一。近年持续警示先进 AI 的失控风险，是「AI 安全」议题最重要的学术发声者之一。</p>
+        <div class="keys"><b>关键词：</b>注意力 · 表征学习 · AI 安全</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar">约</div><div><h3>约翰·霍普菲尔德</h3><div class="who">1933– · 美国</div></div></div>
+        <p>1982 年用能量函数描述递归网络，把统计物理的方法带入神经网络研究，为 1980 年代连接主义的复苏提供了理论支点。2024 年获诺贝尔物理学奖。</p>
+        <div class="keys"><b>关键词：</b>霍普菲尔德网络 · 联想记忆</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar v3">李</div><div><h3>李飞飞</h3><div class="who">1976– · 美国</div></div></div>
+        <p>ImageNet 的发起人。她用众包方式构建了千万级标注图像数据集，为深度学习提供了最关键的「燃料」与统一评测场。近年推动「空间智能」与以人为本的 AI。</p>
+        <div class="keys"><b>关键词：</b>ImageNet · 计算机视觉 · 空间智能</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar v2">吴</div><div><h3>吴恩达（Andrew Ng）</h3><div class="who">1976– · 美国 / 英国</div></div></div>
+        <p>谷歌大脑与 Coursera 的联合创始人，斯坦福课程与在线公开课让数百万工程师第一次系统学习机器学习。他也是「以数据为中心」这一工程理念的主要倡导者。</p>
+        <div class="keys"><b>关键词：</b>Google Brain · 教育普及 · 数据为中心</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar">德</div><div><h3>德米斯·哈萨比斯</h3><div class="who">1976– · 英国</div></div></div>
+        <p>DeepMind 联合创始人。AlphaGo 证明强化学习能攻克直觉型博弈，AlphaFold 2 把深度学习变成基础科学的工具。2024 年获诺贝尔化学奖。</p>
+        <div class="keys"><b>关键词：</b>AlphaGo · AlphaFold · AI for Science</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar v3">伊</div><div><h3>伊利亚·苏茨克维</h3><div class="who">1986– · 俄罗斯 / 加拿大</div></div></div>
+        <p>AlexNet 作者之一，OpenAI 前首席科学家，是 GPT 系列与「规模定律」路线的核心推动者。他长期关注超级智能的对齐问题，并因此离开 OpenAI 另创研究机构。</p>
+        <div class="keys"><b>关键词：</b>AlexNet · GPT 系列 · 对齐</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar v2">梁</div><div><h3>梁文锋</h3><div class="who">1985– · 中国</div></div></div>
+        <p>深度求索（DeepSeek）创始人。2025 年 1 月开源的 R1 推理模型以显著低于同行的训练成本达到接近前沿的表现，并公开技术细节，改变了「只有巨额算力才能做前沿模型」的行业叙事。</p>
+        <div class="keys"><b>关键词：</b>开源 · 推理模型 · 成本效率</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar">山</div><div><h3>山姆·奥尔特曼</h3><div class="who">1985– · 美国</div></div></div>
+        <p>OpenAI 首席执行官。ChatGPT 的产品化与大规模商业化由他主导，也使他成为全球关于 AI 收益分配与监管辩论中最受关注、争议也最多的产业人物之一。</p>
+        <div class="keys"><b>关键词：</b>ChatGPT · 产品化 · 治理争论</div>
+      </article>
+
+      <article class="card person reveal">
+        <div class="top"><div class="avatar v3">达</div><div><h3>达里奥·阿莫代伊</h3><div class="who">1983– · 美国</div></div></div>
+        <p>Anthropic 联合创始人兼首席执行官，此前在 OpenAI 参与 GPT-2 / GPT-3 相关工作。他主导的「宪法式 AI」尝试用成文原则替代部分人工标注，是可扩展对齐的一条主流技术路径。</p>
+        <div class="keys"><b>关键词：</b>Constitutional AI · 可解释性 · AI 安全</div>
+      </article>
+    </div>
+
+    <div class="note reveal" style="margin-top:1.8rem">
+      <b>一份名单必然有遗漏。</b>这里没有列出的人同样塑造了这段历史，例如：提出 SVM 的万普尼克与科尔特斯，
+      提出 LSTM 的霍赫赖特与施密德胡贝尔，发明 GAN 的古德费洛，提出 ResNet 的何恺明，以及构建 WordNet、CYC、Prolog 与无数开源工具的工程师群体。
+      他们共同构成了 AI 的真实分工结构——极少数的旗帜，与数量庞大的具体贡献者。
+    </div>
+  </div>
+</section>
+
+<!-- ===== 技术谱系 ===== -->
+<section class="section" id="lineage">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Lineage</span>
+      <h2 class="h-sec">技术谱系：从一颗神经元到 Transformer</h2>
+      <p class="lead">
+        如果只看一条主线，今天所有大模型都可以追溯到 1943 年的那个数学模型。
+        每一代都在解决上一代留下的具体缺陷——下面每一行的「解决的问题」，就是它存在的理由。
+      </p>
+    </div>
+
+    <div class="grid" style="gap:.85rem">
+      <div class="era reveal">
+        <div class="span">G1 · 1943</div>
+        <div><h3>M-P 神经元 → 感知机</h3><p>用阈值单元与权重表示简单决策。<b style="color:var(--cyan)">解决的问题：</b>能否用数学单元表达逻辑；<b style="color:var(--rose)">遗留问题：</b>权重靠人工设定，机器不会自己学。</p><div class="tagline"># 表达力</div></div>
+      </div>
+      <div class="era reveal">
+        <div class="span">G2 · 1958–1969</div>
+        <div><h3>感知机学习算法</h3><p>根据分类错误自动更新权重。<b style="color:var(--cyan)">解决的问题：</b>机器可以自己学；<b style="color:var(--rose)">遗留问题：</b>只能处理线性可分问题，多层网络无法训练。</p><div class="tagline"># 可学习性</div></div>
+      </div>
+      <div class="era reveal">
+        <div class="span">G3 · 1986</div>
+        <div><h3>反向传播 + 多层网络</h3><p>用链式法则把误差逐层回传，训练深层网络成为可能。<b style="color:var(--cyan)">解决的问题：</b>多层网络的训练；<b style="color:var(--rose)">遗留问题：</b>梯度消失、数据太少、算力不足。</p><div class="tagline"># 深度</div></div>
+      </div>
+      <div class="era reveal">
+        <div class="span">G4 · 1989–1997</div>
+        <div><h3>CNN 与 LSTM</h3><p>卷积共享权重处理图像，门控机制处理长序列。<b style="color:var(--cyan)">解决的问题：</b>图像与序列的结构化建模；<b style="color:var(--rose)">遗留问题：</b>特征仍需标注数据，跨任务迁移困难。</p><div class="tagline"># 结构化</div></div>
+      </div>
+      <div class="era reveal">
+        <div class="span">G5 · 2006–2012</div>
+        <div><h3>深度学习 + GPU + 大数据</h3><p>ReLU、Dropout、批量归一化让深网络可训，ImageNet 与 GPU 提供燃料和引擎。<b style="color:var(--cyan)">解决的问题：</b>规模化训练；<b style="color:var(--rose)">遗留问题：</b>每个任务都要重新标注、重新训练。</p><div class="tagline"># 规模化</div></div>
+      </div>
+      <div class="era reveal">
+        <div class="span">G6 · 2017–2020</div>
+        <div><h3>Transformer + 预训练</h3><p>自注意力取代循环结构，训练可大规模并行；预训练 + 微调让一个模型服务多种任务。<b style="color:var(--cyan)">解决的问题：</b>并行效率与通用性；<b style="color:var(--rose)">遗留问题：</b>输出不可控、不遵循人类意图。</p><div class="tagline"># 通用性</div></div>
+      </div>
+      <div class="era reveal">
+        <div class="span">G7 · 2022–2024</div>
+        <div><h3>RLHF + 多模态</h3><p>用人类反馈把语言模型对齐成助手，图文音视频统一到同一模型。<b style="color:var(--cyan)">解决的问题：</b>可用性与交互形态；<b style="color:var(--rose)">遗留问题：</b>幻觉、复杂推理薄弱、算力成本高。</p><div class="tagline"># 对齐</div></div>
+      </div>
+      <div class="era reveal">
+        <div class="span">G8 · 2024–</div>
+        <div><h3>推理模型与智能体</h3><p>在回答前进行长链条思考，用可验证奖励强化推理过程，并让模型调用工具完成多步任务。<b style="color:var(--cyan)">解决的问题：</b>数学、代码与多步规划；<b style="color:var(--rose)">待解问题：</b>可靠性、长任务稳定性与治理。</p><div class="tagline"># 测试时计算</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 经典文献 ===== -->
+<section class="section" id="papers">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Reading</span>
+      <h2 class="h-sec">十篇改变了方向的文献</h2>
+      <p class="lead">如果只读十份原始材料，就是这十份。它们分别标记了一个转折点，按时间排列。</p>
+    </div>
+
+    <div class="table-scroll reveal">
+      <table>
+        <thead>
+          <tr><th style="width:8%">年份</th><th style="width:34%">文献</th><th style="width:22%">作者</th><th>为什么重要</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mono">1943</td><td><b>A Logical Calculus of the Ideas Immanent in Nervous Activity</b></td><td>麦卡洛克、皮茨</td><td>第一个人工神经元模型，连接主义的起点</td></tr>
+          <tr><td class="mono">1950</td><td><b>Computing Machinery and Intelligence</b></td><td>图灵</td><td>把「机器能否思考」变成可操作的测试</td></tr>
+          <tr><td class="mono">1958</td><td><b>The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain</b></td><td>罗森布拉特</td><td>第一个能从数据中学习的神经网络模型</td></tr>
+          <tr><td class="mono">1969</td><td><b>Perceptrons</b></td><td>明斯基、帕佩特</td><td>指出单层网络的表达极限，直接引发第一次寒冬</td></tr>
+          <tr><td class="mono">1986</td><td><b>Learning Representations by Back-Propagating Errors</b></td><td>鲁梅尔哈特、辛顿、威廉姆斯</td><td>让多层网络的训练成为常规操作</td></tr>
+          <tr><td class="mono">1989</td><td><b>Backpropagation Applied to Handwritten Zip Code Recognition</b></td><td>杨立昆等</td><td>卷积网络的工程起点，今天视觉模型的原型</td></tr>
+          <tr><td class="mono">2012</td><td><b>ImageNet Classification with Deep Convolutional Neural Networks</b></td><td>克里热夫斯基、苏茨克维、辛顿</td><td>AlexNet，深度学习革命的开场</td></tr>
+          <tr><td class="mono">2015</td><td><b>Deep Learning</b>（《自然》综述）</td><td>杨立昆、本吉奥、辛顿</td><td>把深度学习的原理与边界系统化，成为该领域的标准入门文献</td></tr>
+          <tr><td class="mono">2017</td><td><b>Attention Is All You Need</b></td><td>瓦斯瓦尼等（谷歌）</td><td>Transformer，此后所有大模型的共同架构</td></tr>
+          <tr><td class="mono">2022</td><td><b>Training Language Models to Follow Instructions with Human Feedback</b></td><td>欧阳龙等（OpenAI）</td><td>RLHF 流程的公开说明，ChatGPT 背后的关键方法</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="center" style="margin-top:2rem">
+      <a class="btn btn-primary" href="future.html">最后一站：当下与未来 →</a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <div>
+      <div style="color:var(--text);font-weight:700;margin-bottom:.3rem">人工智能发展史 · 导览</div>
+      <div>一个纯静态的科普站点，无外部依赖，可离线打开。</div>
+      <div class="small" style="margin-top:.5rem">© <span data-year>2026</span> 内容整理自公开学术资料与历史文献，仅供学习参考。</div>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">首页</a>
+      <a href="timeline.html">发展时间轴</a>
+      <a href="pioneers.html">关键人物</a>
+      <a href="future.html">当下与未来</a>
+    </nav>
+  </div>
+</footer>
+
+<button class="totop" aria-label="返回顶部">↑</button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

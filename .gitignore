@@ -1,0 +1,19 @@
+# 操作系统生成的垃圾文件
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# 编辑器与 IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 临时与备份文件
+*.tmp
+*.bak
+*~
+
+# 本地预览/截图产物，不应进入站点仓库
+_preview/
+screenshots/
